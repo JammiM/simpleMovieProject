@@ -1,0 +1,30 @@
+{
+  "name": "simple_movie_project",
+  "version": "1.0.0",
+  "description": "A simple app that displays movie data via an API.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JammiM/simpleMovieProject.git"
+  },
+  "keywords": [
+    "movie",
+    "API",
+    "app"
+  ],
+  "author": "James M",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JammiM/simpleMovieProject/issues"
+  },
+  "homepage": "https://github.com/JammiM/simpleMovieProject#readme",
+  "dependencies": {
+    "jquery": "^3.1.1"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1"
+  }
+}

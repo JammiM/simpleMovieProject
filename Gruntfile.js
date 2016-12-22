@@ -54,4 +54,8 @@ module.exports = function(grunt) {
  	grunt.loadNpmTasks('grunt-contrib-uglify');
  	grunt.loadNpmTasks('grunt-contrib-watch');
 
+
+ 	// The 'default' command runs these processes.
+ 	grunt.registerTask('default', ['jade', 'uglify']);
+
 };//module.exports

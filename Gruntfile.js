@@ -5,6 +5,9 @@ module.exports = function(grunt) {
 
 		pug: {
 		  compile: {
+	        options: {
+	          pretty: true,
+	        },
 		    files: [{
 		      expand: true,
 		      cwd: "source/jade",
@@ -15,8 +18,7 @@ module.exports = function(grunt) {
 		  }
 		},
 
-
-		//Grabs both JQuery and modernizr and merges them into one.
+		// Grabs both JQuery and modernizr and merges them into one.
 		uglify: {
 		  bower_js_files: {
 		    files: {
@@ -28,8 +30,16 @@ module.exports = function(grunt) {
 		  }
 		},
 
-
-
+		// Local Server via Express.
+		express: {
+		  all: {
+		    options: {
+		      bases: 'build',
+		      livereload: true,
+		      open: 'http://localhost:3000'
+		    }
+		  }
+		},
 
 		// Watches for changes in code.
 		watch: {
@@ -39,10 +49,6 @@ module.exports = function(grunt) {
 		  }
 		},
 
-
-
-
-	 
 	});//grunt.initConfig
 
 
@@ -53,9 +59,13 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-autoprefixer');
  	grunt.loadNpmTasks('grunt-contrib-uglify');
  	grunt.loadNpmTasks('grunt-contrib-watch');
+ 	grunt.loadNpmTasks('grunt-express');
 
 
  	// The 'default' command runs these processes.
- 	grunt.registerTask('default', ['jade', 'uglify']);
+ 	grunt.registerTask('default', ['pug', 'uglify']);
+
+ 	// The 'start' command starts the server and watch processes.
+ 	grunt.registerTask('start', ['express', 'watch']);
 
 };//module.exports

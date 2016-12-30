@@ -31,6 +31,7 @@ module.exports = function(grunt) {
 		},
 
 		// Local Server via Express.
+		/*
 		express: {
 		  all: {
 		    options: {
@@ -40,6 +41,21 @@ module.exports = function(grunt) {
 		    }
 		  }
 		},
+		*/
+
+		// browserSync for cross browser and cross device testing.
+		browserSync: {
+		  bsFiles: {
+		    src : ['build/*.css', 'build/*.html']
+		  },
+		  options: {
+		    watchTask: true,
+		    server: {
+		      baseDir: "build"
+		    }
+		  }
+		},
+
 
 		// Added grunt-parallel due to a optional dependency
 		parallel: {
@@ -70,7 +86,8 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-autoprefixer');
  	grunt.loadNpmTasks('grunt-contrib-uglify');
  	grunt.loadNpmTasks('grunt-contrib-watch');
- 	grunt.loadNpmTasks('grunt-express');
+	grunt.loadNpmTasks('grunt-browser-sync');   //  'grunt-express' needs to be disabled for 'grunt-browser-sync' to work.
+ //	grunt.loadNpmTasks('grunt-express');
 	grunt.loadNpmTasks('grunt-parallel');
 
 
@@ -78,6 +95,6 @@ module.exports = function(grunt) {
  	grunt.registerTask('default', ['pug', 'uglify']);
 
  	// The 'start' command starts the server and watch processes.
- 	grunt.registerTask('start', ['express', 'watch']);
+ 	grunt.registerTask('start', ['browserSync', 'watch']);
 
 };//module.exports

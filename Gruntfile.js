@@ -41,6 +41,17 @@ module.exports = function(grunt) {
 		  }
 		},
 
+		// Added grunt-parallel due to a optional dependency
+		parallel: {
+	    assets: {
+	      options: {
+	        grunt: true
+	      },
+	      tasks: ['fast', 'block', 'fast']
+	    }
+	  },
+
+
 		// Watches for changes in code.
 		watch: {
 		  pug: {
@@ -60,6 +71,7 @@ module.exports = function(grunt) {
  	grunt.loadNpmTasks('grunt-contrib-uglify');
  	grunt.loadNpmTasks('grunt-contrib-watch');
  	grunt.loadNpmTasks('grunt-express');
+	grunt.loadNpmTasks('grunt-parallel');
 
 
  	// The 'default' command runs these processes.

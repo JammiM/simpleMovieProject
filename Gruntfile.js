@@ -30,6 +30,22 @@ module.exports = function(grunt) {
 		  }
 		},
 
+		less: {
+			development: {
+				options: {
+					paths: ["assets/css"]
+				},
+				files: {"build/style.css": "source/less/style.less"}
+			},
+			 production: {
+				options: {
+					paths: ["assets/css"],
+					cleancss: true
+				},
+				files: {"build/style.css": "source/less/style.less"}
+			}
+		},
+
 		// Local Server via Express.
 		/*
 		express: {
@@ -86,13 +102,14 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-autoprefixer');
  	grunt.loadNpmTasks('grunt-contrib-uglify');
  	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-contrib-less');
 	grunt.loadNpmTasks('grunt-browser-sync');   //  'grunt-express' needs to be disabled for 'grunt-browser-sync' to work.
  //	grunt.loadNpmTasks('grunt-express');
 	grunt.loadNpmTasks('grunt-parallel');
 
 
  	// The 'default' command runs these processes.
- 	grunt.registerTask('default', ['pug', 'uglify']);
+ 	grunt.registerTask('default', ['pug', 'uglify', 'less']);
 
  	// The 'start' command starts the server and watch processes.
  	grunt.registerTask('start', ['browserSync', 'watch']);

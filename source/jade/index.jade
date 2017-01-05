@@ -4,17 +4,33 @@ html
     meta(charset='utf-8')
     title My Movie Application
     link(href='style.css', rel='stylesheet')
+    link(href='bootstrap/dist/css/bootstrap.css' rel="stylesheet")
   body
     header
-    h1 My Movie Application
-    input(type="text")#searchCriteria
-    button#mainBtn Search
+      .container
+        .row
+          h1.col-lg-12.text-center My Movie Application
+        .row
+          input(type="text")#searchCriteria.col-lg-6.col-md-6
+          button#mainBtn.col-lg-6.col-md-6 Search
     main
       .container
-        h1#movieTitle
-        p#description
-        #movieRating
-        #totalResults
-        img#poster
+        .row
+          .col-md-6
+            h1#movieTitle Title : 
+            p#description Description :
+            #movieRating Movie Rating :
+            #movieReleaseDate Release Date :
+            #movieRunTime RunTime :
+            #movieGenre 
+            #movieDirector Director :
+            #movieActors Actors :
+            #movieWriter Writer :
+            #movieAwards Awards :
+            #movieimdbRating imdbRating :
+          .col-md-6
+            img#poster
     footer
     script(src='script.js')
+    script(src='jquery/dist/jquery.js')
+    script(src='bootstrap/dist/js/bootstrap.js')

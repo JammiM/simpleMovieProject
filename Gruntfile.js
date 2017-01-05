@@ -63,7 +63,7 @@ module.exports = function(grunt) {
 		express: {
 		  all: {
 		    options: {
-		      bases: 'build',
+		      bases: ['build','bower_components'],
 		      livereload: true,
 		      open: 'http://localhost:3000'
 		    }

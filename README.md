@@ -2,6 +2,12 @@
 This is a simple project that retrieves movie data from the OMDB API.
 https://www.omdbapi.com/
 
+=============================================================
+### TODOS
+Convert JS to Jquery
+Add more CSS formatting
+
+=============================================================
 ### Components
 Jade/Pug > html
 Less > css

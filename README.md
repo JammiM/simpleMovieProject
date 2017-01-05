@@ -1,13 +1,15 @@
 # Simple Movie Project
-This is simple project that retrieves movie data from the OMDB API.
+This is a simple project that retrieves movie data from the OMDB API.
 https://www.omdbapi.com/
 
+### Components
 Jade/Pug > html
-
-
+Less > css
+Uglify  minifies (jquery.js + modernizr.js) to output.min.js
+Express/BrowserSync is used as the local server.
 
 =============================================================
-### Package Manageer
+### Package Manager
 Currently using both 'npm' and 'bower'
 'npm' for development management
 'bower' for  front end package management
@@ -18,10 +20,10 @@ One of these will be removed later in the development.
 Grunt
 
 =============================================================
-
 ### Packages
-grunt-contrib-pug
-grunt-autoprefixer
-grunt-contrib-uglify
-grunt-contrib-watch
-grunt-browser-sync
+- grunt-contrib-pug
+- grunt-autoprefixer
+- grunt-contrib-uglify
+- grunt-contrib-watch
+- grunt-browser-sync
+- grunt-contrib-less

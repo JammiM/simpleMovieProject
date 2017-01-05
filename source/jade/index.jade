@@ -1,12 +1,20 @@
 doctype html
 html
   head
+    meta(charset='utf-8')
     title My Movie Application
+    link(href='style.css', rel='stylesheet')
   body
     header
-    h1 Hello 
+    h1 My Movie Application
     input(type="text")#searchCriteria
     button#mainBtn Search
     main
-      #description
+      .container
+        h1#movieTitle
+        p#description
+        #movieRating
+        #totalResults
+        img#poster
     footer
+    script(src='script.js')

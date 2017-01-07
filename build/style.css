@@ -1,7 +1,23 @@
-.container h1 {
-  font-size: 25px;
-  color: #00FF00;
+body {
+  background-color: #FFF911;
 }
-.container p {
-  font-size: 25px;
+.container h1 {
+  color: #03A9B0;
+}
+.container p,
+.container span {
+  font-size: 15px;
+  color: #198392;
+}
+.container #movieData {
+  font-size: 10px;
+}
+.container #mainMovieData {
+  border: 5px solid #000;
+}
+.container #mainMovieData > h1 {
+  display: inline;
+}
+.container #mainMovieData span {
+  margin-left: 100px;
 }

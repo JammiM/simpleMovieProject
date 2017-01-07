@@ -1,12 +1,47 @@
-@primarycolor: #00FF00;
+@backgroundColour  : #1E4451;
+@secondaryColour   : #03A9B0;
+@darkerBlueColour  : #0B6D78;
+@lighterBlueColour : #198392;
+@lighterColour     : #F2F2F2;
+
+
+@bodyColour: #FFF911;
+
+
+body{
+  background-color: @bodyColour;
+}
+
+//main, header,footer{
+//  background-color: @backgroundColour;
+//}
 
 .container{
+
   h1{
-       font-size: 25px;
-       color: @primarycolor;
+       color: @secondaryColour;
  }
-  p{
-       font-size: 25px;
+  p,span{
+       font-size: 15px;
+       color: @lighterBlueColour;
   }
+
+  #movieData {
+    font-size: 10px;
+  }
+
+  #mainMovieData{
+    border: 5px solid #000;
+
+    > h1 {
+      display: inline;
+    }
+
+    span {
+      margin-left: 100px;
+    }
+  }
+
+
 
 }

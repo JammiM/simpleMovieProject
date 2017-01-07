@@ -99,8 +99,8 @@ module.exports = function(grunt) {
 		// Watches for changes in code.
 		watch: {
 		  pug: {
-		    files: [ 'source/jade/*.jade' ],
-		    tasks: ['pug']
+		    files: [ 'source/jade/*.jade','source/less/*.less' ],
+		    tasks: ['pug','less']
 		  }
 		},
 
@@ -119,7 +119,14 @@ module.exports = function(grunt) {
 
 
  	// The 'default' command runs these processes.
- 	grunt.registerTask('default', ['pug', 'uglify', 'less', 'autoprefixer']);
+ 	//grunt.registerTask('default', ['pug', 'uglify', 'less', 'autoprefixer']);
+	grunt.registerTask('default', ['pug', 'less', 'autoprefixer']);
+
+
+
+
+
+
 
  	// The 'start' command starts the server and watch processes.
  	grunt.registerTask('start', ['express', 'watch']);

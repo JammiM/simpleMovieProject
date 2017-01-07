@@ -16,19 +16,20 @@ html
     main
       .container
         .row
-          .col-md-6
-            h1#movieTitle Title : 
-            p#description Description :
-            #movieRating Movie Rating :
-            #movieReleaseDate Release Date :
-            #movieRunTime RunTime :
-            #movieGenre 
-            #movieDirector Director :
-            #movieActors Actors :
-            #movieWriter Writer :
-            #movieAwards Awards :
-            #movieimdbRating imdbRating :
-          .col-md-6
+          .col-md-8
+            .mainMovieData
+              h1#movieTitle 
+              span#movieReleaseDate
+              span#movieimdbRating
+              span#movieRunTime
+            p#description 
+            section#movieData
+              p#movieGenre 
+              p#movieDirector Director :
+              p#movieActors Actors :
+              p#movieWriter Writer :
+              p#movieAwards Awards :
+          .col-md-4
             img#poster
     footer
     script(src='script.js')

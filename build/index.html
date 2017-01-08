@@ -13,28 +13,32 @@
           <h1 class="col-lg-12 text-center">My Movie Application</h1>
         </div>
         <div class="row">
-          <input class="col-lg-6 col-md-6" type="text" id="searchCriteria">
-          <button class="col-lg-6 col-md-6" id="mainBtn">Search</button>
+          <input class="form-control col-lg-6 col-md-6 col-sm-6 col-xs-6" type="text" id="searchCriteria">
+          <button class="col-lg-6 col-md-6 col-sm-6 col-xs-6" id="mainBtn">Search</button>
         </div>
       </div>
     </header>
     <main>
       <div class="container">
         <div class="row">
-          <div class="col-md-8">
-            <div class="mainMovieData">
-              <h1 id="movieTitle"> </h1><span id="movieReleaseDate"></span><span id="movieimdbRating"></span><span id="movieRunTime"></span>
-            </div>
+          <div class="col-md-8 col-sm-8">
+            <div id="mainMovieData">
+              <h1 id="movieTitle"></h1>
+              <h1><em id="movieYear"></em></h1>
+            </div><span>
+              <div id="movieimdbRating"></div></span><span>
+              <div id="movieRunTime"></div></span><span>
+              <div id="movieGenre"> </div></span>
             <p id="description"> </p>
             <section id="movieData">
-              <p id="movieGenre"> </p>
-              <p id="movieDirector">Director :</p>
-              <p id="movieActors">Actors :</p>
-              <p id="movieWriter">Writer :</p>
-              <p id="movieAwards">Awards :</p>
+              <p id="movieDirector">Director </p>
+              <p id="movieActors">Actors </p>
+              <!--li #[a(href="#") click  #[span here #[strong !]]]-->
+              <p id="movieWriter">Writer</p>
+              <p id="movieAwards">Awards </p>
             </section>
           </div>
-          <div class="col-md-4"><img id="poster"></div>
+          <div class="col-md-4 col-sm-4"><img class="img-responsive rounded" id="poster"></div>
         </div>
       </div>
     </main>

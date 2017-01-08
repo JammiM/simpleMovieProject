@@ -3,45 +3,50 @@
 @darkerBlueColour  : #0B6D78;
 @lighterBlueColour : #198392;
 @lighterColour     : #F2F2F2;
-
-
 @bodyColour: #FFF911;
 
 
-body{
-  background-color: @bodyColour;
-}
-
-//main, header,footer{
+//body{
 //  background-color: @backgroundColour;
 //}
 
+
+main, header,footer{
+  background-color: @backgroundColour;
+}
+/*
 .container{
 
   h1{
-       color: @secondaryColour;
+       color: @lighterColour;
  }
   p,span{
        font-size: 15px;
-       color: @lighterBlueColour;
+       display: inline-block;
+       color: @lighterColour;
   }
 
   #movieData {
     font-size: 10px;
+    border: 2px solid @secondaryColour;
+    border-radius: 10px;
   }
 
   #mainMovieData{
-    border: 5px solid #000;
+    border-bottom: 5px solid #000;
 
     > h1 {
-      display: inline;
+      display: inline-block;
+      color: @lighterColour;
     }
 
     span {
-      margin-left: 100px;
+      margin-left: 20px;
+      color:  @lighterColour;
+      display: inline-block;
     }
   }
 
-
-
 }
+
+*/

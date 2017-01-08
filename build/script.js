@@ -44,18 +44,18 @@ function processData() {
         var movieimdbRating = movieJSON.imdbRating;
 
         //https://www.omdbapi.com/
-        document.getElementById('movieTitle').innerHTML       = "" + movieTitle;
-        //document.getElementById('totalResults').innerHTML = "Total Results : " + totalResults;
-        document.getElementById('description').innerHTML      = "Description : \n" + plot;
-        document.getElementById('poster').src = poster;
-        document.getElementById('movieReleaseDate').innerHTML = " &#124 (" + movieReleaseDate + ") &#124";
-        document.getElementById('movieRunTime').innerHTML     = "(" + movieRunTime + ")";
-        document.getElementById('movieGenre').innerHTML       = "(" + movieGenre + ")";
+        document.getElementById('movieTitle').innerHTML       = movieTitle;
+        document.getElementById('description').innerHTML      = plot;
+        document.getElementById('poster').src                 = poster;
+        document.getElementById('movieYear').innerHTML        = "(" + movieYear + ") ";
+        document.getElementById('movieRunTime').innerHTML     = " &#124 (" + movieRunTime + ") ";
+        document.getElementById('movieGenre').innerHTML       = " &#124 (" + movieGenre + ") ";
         document.getElementById('movieDirector').innerHTML    = "Director : " + movieDirector;
-        document.getElementById('movieActors').innerHTML      = "Actors : " + movieActors;
+        document.getElementById('movieActors').innerHTML      = "Starring : " + movieActors;
         document.getElementById('movieWriter').innerHTML      = "Writer : " + movieWriter;
         document.getElementById('movieAwards').innerHTML      = "Awards : " + movieAwards;
-        document.getElementById('movieimdbRating').innerHTML  =  movieimdbRating+ "/ 10 ";
+        document.getElementById('movieimdbRating').innerHTML  =  movieimdbRating + "/10 ";
+        //document.getElementById('totalResults').innerHTML = "Total Results : " + totalResults;
 
       }//if
 

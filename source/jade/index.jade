@@ -11,26 +11,27 @@ html
         .row
           h1.col-lg-12.text-center My Movie Application
         .row
-          input(type="text")#searchCriteria.col-lg-6.col-md-6
-          button#mainBtn.col-lg-6.col-md-6 Search
+          input(type="text")#searchCriteria.form-control.col-lg-6.col-md-6.col-sm-6.col-xs-6
+          button#mainBtn.col-lg-6.col-md-6.col-sm-6.col-xs-6 Search
     main
       .container
         .row
-          .col-md-8
-            .mainMovieData
-              h1#movieTitle 
-              span#movieReleaseDate
-              span#movieimdbRating
-              span#movieRunTime
+          .col-md-8.col-sm-8
+            #mainMovieData
+              h1#movieTitle
+              h1: em#movieYear
+            span: #movieimdbRating
+            span: #movieRunTime
+            span: #movieGenre 
             p#description 
             section#movieData
-              p#movieGenre 
-              p#movieDirector Director :
-              p#movieActors Actors :
-              p#movieWriter Writer :
-              p#movieAwards Awards :
-          .col-md-4
-            img#poster
+              p#movieDirector Director 
+              p#movieActors Actors 
+              //li #[a(href="#") click  #[span here #[strong !]]]
+              p#movieWriter Writer
+              p#movieAwards Awards 
+          .col-md-4.col-sm-4
+            img.img-responsive.rounded#poster
     footer
     script(src='script.js')
     script(src='jquery/dist/jquery.js')

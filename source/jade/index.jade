@@ -9,14 +9,15 @@ html
     header
       .container
         .row
-          h1.col-lg-12.text-center My Movie Application
+          h1.col-lg-4.col-md-4.col-sm-4.col-xs-4.text-center My Movie Application
+          p.col-lg-8.col-md-8.col-sm-8.col-xs-8.text-center version 1.0
         .row
           input(type="text")#searchCriteria.form-control.col-lg-6.col-md-6.col-sm-6.col-xs-6
           button#mainBtn.col-lg-6.col-md-6.col-sm-6.col-xs-6 Search
     main
       .container
         .row
-          .col-md-8.col-sm-8
+          section#movieInfo.col-lg-8.col-md-8.col-sm-8.col-xs-8
             #mainMovieData
               h1#movieTitle
               h1: em#movieYear
@@ -24,14 +25,15 @@ html
             span: #movieRunTime
             span: #movieGenre 
             p#description 
-            section#movieData
-              p#movieDirector Director 
-              p#movieActors Actors 
+            p#movieDirector
+            p#movieActors 
               //li #[a(href="#") click  #[span here #[strong !]]]
-              p#movieWriter Writer
-              p#movieAwards Awards 
-          .col-md-4.col-sm-4
+            p#movieWriter
+            p#movieAwards 
+          section#moviePoster.col-lg-4.col-md-4.col-sm-4.col-xs-4
             img.img-responsive.rounded#poster
+			
+
     footer
     script(src='script.js')
     script(src='jquery/dist/jquery.js')

@@ -10,7 +10,8 @@
     <header>
       <div class="container">
         <div class="row">
-          <h1 class="col-lg-12 text-center">My Movie Application</h1>
+          <h1 class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">My Movie Application</h1>
+          <p class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-center">version 1.0</p>
         </div>
         <div class="row">
           <input class="form-control col-lg-6 col-md-6 col-sm-6 col-xs-6" type="text" id="searchCriteria">
@@ -21,7 +22,7 @@
     <main>
       <div class="container">
         <div class="row">
-          <div class="col-md-8 col-sm-8">
+          <section class="col-lg-8 col-md-8 col-sm-8 col-xs-8" id="movieInfo">
             <div id="mainMovieData">
               <h1 id="movieTitle"></h1>
               <h1><em id="movieYear"></em></h1>
@@ -30,15 +31,14 @@
               <div id="movieRunTime"></div></span><span>
               <div id="movieGenre"> </div></span>
             <p id="description"> </p>
-            <section id="movieData">
-              <p id="movieDirector">Director </p>
-              <p id="movieActors">Actors </p>
+            <p id="movieDirector">Director </p>
+            <p id="movieActors">Actors 
               <!--li #[a(href="#") click  #[span here #[strong !]]]-->
-              <p id="movieWriter">Writer</p>
-              <p id="movieAwards">Awards </p>
-            </section>
-          </div>
-          <div class="col-md-4 col-sm-4"><img class="img-responsive rounded" id="poster"></div>
+            </p>
+            <p id="movieWriter">Writer</p>
+            <p id="movieAwards">Awards </p>
+          </section>
+          <section class="col-lg-4 col-md-4 col-sm-4 col-xs-4" id="moviePoster"><img class="img-responsive rounded" id="poster"></section>
         </div>
       </div>
     </main>

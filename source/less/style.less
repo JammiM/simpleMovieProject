@@ -1,3 +1,4 @@
+/*
 @backgroundColour  : #1E4451;
 @secondaryColour   : #03A9B0;
 @darkerBlueColour  : #0B6D78;
@@ -60,8 +61,24 @@ main, header,footer{
 
 header {
 
-  p{
-    margin-top: 50%;
+    .container{
+
+      p {
+        padding-top: 40px;
+      }
+
+    }
+}
+*/
+
+@backgroundColour  : #1E4451;
+@lighterColour     : #F2F2F2;
+
+header, main {
+  background-color: @backgroundColour;
+
+  h1, p, em {
+    color: @lighterColour ;
   }
 
 }

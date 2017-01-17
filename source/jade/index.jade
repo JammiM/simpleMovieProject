@@ -2,14 +2,14 @@ doctype html
 html
   head
     meta(charset='utf-8')
-    title My Movie Application
+    title Movie Application
     link(href='style.css', rel='stylesheet')
     link(href='bootstrap/dist/css/bootstrap.css' rel="stylesheet")
   body
     header
       .container
         .row
-          h1.col-lg-4.col-md-4.col-sm-4.col-xs-4.text-center My Movie Application
+          h1.col-lg-4.col-md-4.col-sm-4.col-xs-4.text-center Movie Application
           p.col-lg-8.col-md-8.col-sm-8.col-xs-8.text-center version 1.0
         .row
           input(type="text")#searchCriteria.form-control.col-lg-6.col-md-6.col-sm-6.col-xs-6
@@ -17,24 +17,27 @@ html
     main
       .container
         .row
-          section#movieInfo.col-lg-8.col-md-8.col-sm-8.col-xs-8
+          section#movieInfo.col-lg-5.col-md-5.col-sm-5.col-xs-5
             #mainMovieData
               h1#movieTitle
-              h1: em#movieYear
-            span: #movieimdbRating
-            span: #movieRunTime
-            span: #movieGenre 
-            p#description 
-            p#movieDirector
-            p#movieActors 
+              h2: em#movieYear
+              span: #movieimdbRating
+              span: #movieRunTime
+              span: #movieGenre 
+              p#description 
+              p#movieDirector
+              p#movieActors 
               //li #[a(href="#") click  #[span here #[strong !]]]
             p#movieWriter
             p#movieAwards 
-          section#moviePoster.col-lg-4.col-md-4.col-sm-4.col-xs-4
-            img.img-responsive.rounded#poster
-			
-
+          section#moviePoster.col-lg-5.col-md-5.col-sm-5.col-xs-5
+            img.img-responsive.rounded.center-block#poster
+          section#AppInfo.col-lg-2.col-md-2.col-sm-2.col-xs-2
+            .well: em This app retrieves movie data from the OMDB API.
     footer
     script(src='script.js')
     script(src='jquery/dist/jquery.js')
     script(src='bootstrap/dist/js/bootstrap.js')
+    script(src="//cdnjs.cloudflare.com/ajax/libs/velocity/1.4.0/velocity.min.js")
+    //https://raw.githubusercontent.com/julianshapiro/velocity/master/velocity.min.js
+    //cdnjs.cloudflare.com/ajax/libs/velocity/1.4.0/velocity.min.js

@@ -1,8 +1,10 @@
 var xmlhttp;
 
 window.onload = function () {
-
   document.getElementById('mainBtn').addEventListener('click', getData, false);
+
+  activateAnimations();
+
 }//onload
 
 function getData(e) {
@@ -60,3 +62,15 @@ function processData() {
       }//if
 
 }//processData
+
+
+function activateAnimations() {
+
+  $("header .container .row h1").velocity({
+      left: "500px",
+  }, {
+      duration: 3000,
+      easing: "linear"
+  });
+
+}//activateAnimations

@@ -2,9 +2,7 @@ var xmlhttp;
 
 window.onload = function () {
   document.getElementById('mainBtn').addEventListener('click', getData, false);
-
   activateAnimations();
-
 }//onload
 
 function getData(e) {
@@ -13,10 +11,20 @@ function getData(e) {
   var url = "http://www.omdbapi.com/?t=" + theTitle + "&y=&plot=short&r=json"
   //console.log(url);
 
-  xmlhttp = new XMLHttpRequest();
-  xmlhttp.onreadystatechange = processData;
-  xmlhttp.open("GET", url, true);
-  xmlhttp.send();
+
+  if ( window.XMLHttpRequest ) {
+    // Checks if the (modern) browser supports xmlhttp.
+    xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = processData;
+    xmlhttp.open("GET", url, true);
+    xmlhttp.send();
+  } else {
+    // Targetted towards older browsers IE that don't support modern xmlhttp.
+    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    xmlhttp.onreadystatechange = processData;
+    xmlhttp.open("GET", url, true);
+    xmlhttp.send();
+  }
   //console.log(xmlhttp);
 }//getData
 
@@ -28,7 +36,7 @@ function processData() {
         var movieJSON = xmlhttp.responseText;
         //console.log(movieJSON);
         movieJSON = JSON.parse(movieJSON);
-        console.log(movieJSON);
+        //console.log(movieJSON);
 
         var movieRating = movieJSON.imdbRating;
         var movieTitle = movieJSON.Title;
@@ -59,18 +67,33 @@ function processData() {
         document.getElementById('movieimdbRating').innerHTML  =  movieimdbRating + "/10 ";
         //document.getElementById('totalResults').innerHTML = "Total Results : " + totalResults;
 
-      }//if
+      }
+      /* Error checking for the 'readyState' response.
+      else if (xmlhttp.readyState == 1) {
+        alert("server connection established.");
+      } else if (xmlhttp.readyState == 2) {
+        alert("request received.");
+      } else if (xmlhttp.readyState == 3) {
+        alert("processing request.");
+      } else {
+        alert("The server was reached, but it returned an error.");
+      }
+      */
 
 }//processData
 
 
 function activateAnimations() {
 
+/*
   $("header .container .row h1").velocity({
       left: "500px",
   }, {
       duration: 3000,
       easing: "linear"
   });
+*/
+
+$("li").velocity("transition.slideLeftIn", {stagger: 300, drag: true });
 
 }//activateAnimations

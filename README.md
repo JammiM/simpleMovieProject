@@ -6,7 +6,8 @@ https://www.omdbapi.com/
 ### How to use
 
 ```bash
-    npm install 
+    npm install
+    bower install
     grunt
     grunt start
 ```

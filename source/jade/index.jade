@@ -2,6 +2,7 @@ doctype html
 html
   head
     meta(charset='utf-8')
+    meta(name="viewport" content="width=device-width, initial-scale=1")
     title Movie Application
     link(href='style.css', rel='stylesheet')
     link(href='bootstrap/dist/css/bootstrap.css' rel="stylesheet")
@@ -9,39 +10,40 @@ html
     header
       .container
         .row
-          h1.col-lg-4.col-md-4.col-sm-4.col-xs-4.text-center Movie Application
-          p.col-lg-8.col-md-8.col-sm-8.col-xs-8.text-center version 1.0
+          h1.col-lg-12.col-md-12.col-sm-12.col-xs-12.text-center Movie Application
         .row
-          ul.myList
-            li First
-            li Second
-            li Third
-            li Fourth
-          .input-group.col-lg-6.col-md-6.col-sm-6.col-xs-6
+          //ul.myList
+          //  li First
+          //  li Second
+          //  li Third
+          //  li Fourth
+          #primaryInput.input-group.col-lg-12.col-md-12.col-sm-12.col-xs-12
             input(type="text", placeholder="Search for...")#searchCriteria.form-control
             span.input-group-btn
               button(type="button").btn.btn-secondary#mainBtn Search
     main
       .container
         .row
-          section#movieInfo.col-lg-5.col-md-5.col-sm-5.col-xs-5
+          section#movieInfo.col-lg-6.col-md-6.col-sm-6.col-xs-6
             #mainMovieData
               h1#movieTitle
               h2: em#movieYear
               span: #movieimdbRating
               span: #movieRunTime
               span: #movieGenre 
-              p#description 
+              p#description
               p#movieDirector
               p#movieActors 
               //li #[a(href="#") click  #[span here #[strong !]]]
             p#movieWriter
             p#movieAwards 
-          section#moviePoster.col-lg-5.col-md-5.col-sm-5.col-xs-5
+          section#moviePoster.col-lg-6.col-md-6.col-sm-6.col-xs-6
             img.img-responsive.rounded.center-block#poster
-          section#AppInfo.col-lg-2.col-md-2.col-sm-2.col-xs-2
-            .well: em This app retrieves movie data from the OMDB API.
+          //section#AppInfo.col-lg-2.col-md-2.col-sm-2.col-xs-2
+            //.well: em This app retrieves movie data from the OMDB API.
     footer
+      .container
+        p footer text
     script(src='script.js')
     //script(src='jquery/dist/jquery.js')
     //script(src='bootstrap/dist/js/bootstrap.js')

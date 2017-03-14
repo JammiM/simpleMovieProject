@@ -19,25 +19,33 @@ html
           //  li Fourth
           #primaryInput.input-group.col-lg-12.col-md-12.col-sm-12.col-xs-12
             input(type="text", placeholder="Search for...")#searchCriteria.form-control
-            span.input-group-btn
+            //.form-group
+              //label(for="sel1") Select list:
+              //select.form-control#sel1
+                //option movie
+                //option series 
+                //option episode
+              
+            span.input-group-btn            
               button(type="button").btn.btn-secondary#mainBtn Search
+
     main
       .container
         .row
-          section#movieInfo.col-lg-6.col-md-6.col-sm-6.col-xs-6
+          section#movieInfo.col-lg-6.col-md-6.col-sm-6.col-xs-12
             #mainMovieData
               h1#movieTitle
-              h2: em#movieYear
+              span: em#movieYear
               span: #movieimdbRating
               span: #movieRunTime
               span: #movieGenre 
               p#description
               p#movieDirector
-              p#movieActors 
+              //p#movieActors 
               //li #[a(href="#") click  #[span here #[strong !]]]
-              p#movieWriter
-              p#movieAwards 
-          section#moviePoster.col-lg-6.col-md-6.col-sm-6.col-xs-6
+              //p#movieWriter
+              //p#movieAwards 
+          section#moviePoster.col-lg-6.col-md-6.col-sm-6.col-xs-12
             img.img-responsive.rounded.center-block#poster
           //section#AppInfo.col-lg-2.col-md-2.col-sm-2.col-xs-2
             //.well: em This app retrieves movie data from the OMDB API.

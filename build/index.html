@@ -20,7 +20,15 @@
           <!--  li Third-->
           <!--  li Fourth-->
           <div class="input-group col-lg-12 col-md-12 col-sm-12 col-xs-12" id="primaryInput">
-            <input class="form-control" type="text" placeholder="Search for..." id="searchCriteria"><span class="input-group-btn">
+            <input class="form-control" type="text" placeholder="Search for..." id="searchCriteria">
+            <!--.form-group
+            //label(for="sel1") Select list:
+            //select.form-control#sel1
+              //option movie
+              //option series 
+              //option episode
+            
+            --><span class="input-group-btn">           
               <button class="btn btn-secondary" type="button" id="mainBtn">Search</button></span>
           </div>
         </div>
@@ -29,22 +37,21 @@
     <main>
       <div class="container">
         <div class="row">
-          <section class="col-lg-6 col-md-6 col-sm-6 col-xs-6" id="movieInfo">
+          <section class="col-lg-6 col-md-6 col-sm-6 col-xs-12" id="movieInfo">
             <div id="mainMovieData">
-              <h1 id="movieTitle"></h1>
-              <h2><em id="movieYear"></em></h2><span>
+              <h1 id="movieTitle"></h1><span><em id="movieYear"></em></span><span>
                 <div id="movieimdbRating"></div></span><span>
                 <div id="movieRunTime"></div></span><span>
                 <div id="movieGenre"> </div></span>
               <p id="description"></p>
               <p id="movieDirector"></p>
-              <p id="movieActors"> </p>
+              <!--p#movieActors -->
               <!--li #[a(href="#") click  #[span here #[strong !]]]-->
-              <p id="movieWriter"></p>
-              <p id="movieAwards"> </p>
+              <!--p#movieWriter-->
+              <!--p#movieAwards -->
             </div>
           </section>
-          <section class="col-lg-6 col-md-6 col-sm-6 col-xs-6" id="moviePoster"><img class="img-responsive rounded center-block" id="poster"></section>
+          <section class="col-lg-6 col-md-6 col-sm-6 col-xs-12" id="moviePoster"><img class="img-responsive rounded center-block" id="poster"></section>
           <!--section#AppInfo.col-lg-2.col-md-2.col-sm-2.col-xs-2//.well: em This app retrieves movie data from the OMDB API.
           -->
         </div>

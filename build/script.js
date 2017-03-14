@@ -32,7 +32,6 @@ function getData(e) {
 function processData() {
 
   if  (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-
         var movieJSON = xmlhttp.responseText;
         //console.log(movieJSON);
         movieJSON = JSON.parse(movieJSON);
@@ -61,11 +60,11 @@ function processData() {
         document.getElementById('movieRunTime').innerHTML     = " &#124 (" + movieRunTime + ") ";
         document.getElementById('movieGenre').innerHTML       = " &#124 (" + movieGenre + ") ";
         document.getElementById('movieDirector').innerHTML    = "Director : " + movieDirector;
-        document.getElementById('movieActors').innerHTML      = "Starring : " + movieActors;
-        document.getElementById('movieWriter').innerHTML      = "Writer : " + movieWriter;
-        document.getElementById('movieAwards').innerHTML      = "Awards : " + movieAwards;
         document.getElementById('movieimdbRating').innerHTML  =  movieimdbRating + "/10 ";
         //document.getElementById('totalResults').innerHTML = "Total Results : " + totalResults;
+        $("#mainMovieData").append("<p>Starring : " + movieActors + "</p>");
+        $("#mainMovieData").append("<p>Writer : " + movieWriter + "</p>");
+        $("#mainMovieData").append("<p>Awards : " + movieAwards + "</p>");
 
         activateAnimations();
 

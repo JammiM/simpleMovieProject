@@ -2,7 +2,7 @@ var xmlhttp;
 
 window.onload = function () {
   document.getElementById('mainBtn').addEventListener('click', getData, false);
-  activateAnimations();
+//  activateAnimations();
 }//onload
 
 function getData(e) {
@@ -67,6 +67,8 @@ function processData() {
         document.getElementById('movieimdbRating').innerHTML  =  movieimdbRating + "/10 ";
         //document.getElementById('totalResults').innerHTML = "Total Results : " + totalResults;
 
+        activateAnimations();
+
       }
       /* Error checking for the 'readyState' response.
       else if (xmlhttp.readyState == 1) {
@@ -94,6 +96,8 @@ function activateAnimations() {
   });
 */
 
-$("li").velocity("transition.slideLeftIn", {stagger: 300, drag: true });
+$("#mainMovieData h1, #mainMovieData h2, #mainMovieData span, #mainMovieData p").velocity("transition.slideLeftIn",
+                          { stagger: 300,
+                            drag: true });
 
 }//activateAnimations

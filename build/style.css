@@ -1,3 +1,4 @@
+/* ###################  GENERAL ################# */
 main {
   padding-top: 30px;
 }
@@ -15,12 +16,14 @@ header,
 footer {
   background-color: #1E4451;
 }
+/* ###################  HEADER ################# */
 #primaryInput {
   margin-top: 20px;
   margin-bottom: 20px;
   padding-left: 20px;
   padding-right: 20px;
 }
+/* ###################  MAIN ################# */
 main {
   padding-bottom: 20px;
 }
@@ -53,7 +56,7 @@ main .container #mainMovieData span {
   color: #F2F2F2;
   display: inline-block;
 }
-/*  FOOTER */
+/* ###################  FOOTER ################# */
 footer {
   margin-top: 10px;
 }

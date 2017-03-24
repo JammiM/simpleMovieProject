@@ -74,3 +74,9 @@ li {
   width: 60px;
   text-align: center;
 }
+#tempHolderForMovies .col-md-3 .well {
+  height: auto;
+}
+#tempHolderForMovies img {
+  width: 100%;
+}

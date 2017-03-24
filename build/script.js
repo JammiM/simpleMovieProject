@@ -1,16 +1,14 @@
 var xmlhttp;
 
-window.onload = function () {
-  document.getElementById('mainBtn').addEventListener('click', getData, false);
-//  activateAnimations();
-}//onload
+//window.onload = function () {
+//  document.getElementById('mainBtn').addEventListener('click', getData, false);
+//}//onload
 
 function getData(e) {
 
   var theTitle = document.getElementById('searchCriteria').value;
   var url = "http://www.omdbapi.com/?t=" + theTitle + "&y=&plot=short&r=json"
   //console.log(url);
-
 
   if ( window.XMLHttpRequest ) {
     // Checks if the (modern) browser supports xmlhttp.
@@ -28,9 +26,7 @@ function getData(e) {
   //console.log(xmlhttp);
 }//getData
 
-
 function processData() {
-
   if  (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
         var movieJSON = xmlhttp.responseText;
         //console.log(movieJSON);
@@ -83,20 +79,72 @@ function processData() {
 
 }//processData
 
-
 function activateAnimations() {
-
-/*
-  $("header .container .row h1").velocity({
-      left: "500px",
-  }, {
-      duration: 3000,
-      easing: "linear"
-  });
-*/
-
-$("#mainMovieData h1, #mainMovieData h2, #mainMovieData span, #mainMovieData p").velocity("transition.slideLeftIn",
+  $("#mainMovieData h1, #mainMovieData h2, #mainMovieData span, #mainMovieData p").velocity("transition.slideLeftIn",
                           { stagger: 300,
                             drag: true });
-
 }//activateAnimations
+
+
+
+$(document).ready(() => {
+
+  $('#mainBtn').on('click', (e) => {
+
+    let enteredText = $('#searchCriteria').val();
+    findMovies(enteredText);
+    e.preventDefault();
+
+  });
+
+});//ready
+
+
+
+function findMovies(enteredText) {
+
+  var url = "http://www.omdbapi.com/?s=" + enteredText;
+  if ( window.XMLHttpRequest ) {
+    xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = processDataM;
+    xmlhttp.open("GET", url, true);
+    xmlhttp.send();
+  } else {
+    // Targetted towards older browsers IE that don't support modern xmlhttp.
+    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    xmlhttp.onreadystatechange = processDataM;
+    xmlhttp.open("GET", url, true);
+    xmlhttp.send();
+  }
+  //console.log(xmlhttp);
+
+}//findMovies
+
+
+function processDataM() {
+  if  (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+        var movieJSON = xmlhttp.responseText;
+        movieJSON = JSON.parse(movieJSON);
+        let AllReturnedMovies = movieJSON.Search;
+        let movieDataReturnedToThePage = ``;
+        $.each(AllReturnedMovies, (index, singleMovie) => {
+
+          movieDataReturnedToThePage += `
+            <div class="col-md-3">
+              <div class="well text-center">
+                <img src="${singleMovie.Poster}">
+                <h5>${singleMovie.Title}</h5>
+              </div>
+            </div>
+          `;
+
+
+        });//eachLoop
+
+      $('#tempHolderForMovies').html(movieDataReturnedToThePage);
+
+      }//if
+
+
+
+}//processDataM

@@ -35,7 +35,8 @@ main #moviePoster img {
 main .container .row {
   background-color: #1E4451;
   border: 2px solid #0B6D78;
-  border-radius: 10px;
+  -moz-border-radius: 10px;
+       border-radius: 10px;
   height: 500px;
 }
 main .container h1 {
@@ -70,7 +71,8 @@ li {
   background: #ccc;
   color: #6B6B6B;
   margin-bottom: 9px;
-  border-radius: 2px;
+  -moz-border-radius: 2px;
+       border-radius: 2px;
   width: 60px;
   text-align: center;
 }

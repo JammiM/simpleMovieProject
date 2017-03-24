@@ -8,10 +8,14 @@ module.exports = function(grunt) {
 	        options: {
 	          pretty: true,
 	        },
+				//files: {
+      //'path/to/dest.html': ['path/to/templates/*.pug', 'another/path/tmpl.pug']
+    //}
 		    files: [{
 		      expand: true,
-		      cwd: "source/jade",
-		      src: "*.jade",
+		      //cwd: "source/jade",
+					cwd: "source/jade",
+					src:  "**/*.pug",
 		      dest: "build",
 		      ext: ".html"
 		    }]
@@ -99,7 +103,7 @@ module.exports = function(grunt) {
 		// Watches for changes in code.
 		watch: {
 		  pug: {
-		    files: [ 'source/jade/*.jade','source/less/*.less' ],
+		    files: [ 'source/jade/*.pug','source/less/*.less' ],
 		    tasks: ['pug','less']
 		  }
 		},

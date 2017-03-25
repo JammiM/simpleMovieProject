@@ -85,8 +85,6 @@ function activateAnimations() {
                             drag: true });
 }//activateAnimations
 
-
-
 $(document).ready(() => {
 
   $('#mainBtn').on('click', (e) => {
@@ -134,10 +132,13 @@ function processDataM() {
               <div class="well text-center">
                 <img src="${singleMovie.Poster}">
                 <h5>${singleMovie.Title}</h5>
+                <em>${singleMovie.Year}</em>
               </div>
             </div>
           `;
 
+
+          activateAnimationsForMovies();
 
         });//eachLoop
 
@@ -148,3 +149,10 @@ function processDataM() {
 
 
 }//processDataM
+
+
+function activateAnimationsForMovies() {
+  $("#tempHolderForMovies").velocity("transition.slideLeftIn",
+                          { stagger: 300,
+                            drag: true });
+}//activateAnimations

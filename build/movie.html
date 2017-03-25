@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Movie Application</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="row">
+          <h1 class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">Movie Application</h1>
+        </div>
+        <div class="row">
+          <!--ul.myList-->
+          <!--  li First-->
+          <!--  li Second-->
+          <!--  li Third-->
+          <!--  li Fourth-->
+          <div class="input-group col-lg-12 col-md-12 col-sm-12 col-xs-12" id="primaryInput">
+            <input class="form-control" type="text" placeholder="Search for..." id="searchCriteria">
+            <!--.form-group
+            //label(for="sel1") Select list:
+            //select.form-control#sel1
+              //option movie
+              //option series
+              //option episode
+            --><span class="input-group-btn">
+              <button class="btn btn-secondary" type="button" id="mainBtn">Search</button></span>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main></main>
+    <section class="container">
+      <div class="row" id="tempHolderForMovies"></div>
+      <footer>
+        <div class="container">
+          <p>footer text</p>
+        </div>
+      </footer>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+      <script src="script.js"></script>
+      <script src="bootstrap/dist/js/bootstrap.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.ui.min.js"></script>
+    </section>
+  </body>
+</html>
